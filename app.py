@@ -183,7 +183,6 @@ def main():
     
     # Display chat history
     if messages:
-        st.markdown("### 💬 Chat History")
         for message in messages:
             with st.chat_message(message["role"]):
                 if message["role"] == "user":
@@ -197,7 +196,7 @@ def main():
     
     # Chat input with better styling
     st.markdown("---")
-    prompt = st.chat_input("💭 Ask a technical question...", key="chat_input")
+    prompt = st.chat_input("💭 Ask a question...", key="chat_input")
     if prompt:
         # Add user message to chat history
         messages.append({"role": "user", "content": prompt})
