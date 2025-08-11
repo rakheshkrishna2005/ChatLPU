@@ -19,7 +19,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Available models for technical learning
 AVAILABLE_MODELS = {
     "OpenAI GPT-OSS 120B": "openai/gpt-oss-120b",
     "Llama 3.3 70B Versatile": "llama-3.3-70b-versatile", 
@@ -225,7 +224,7 @@ def main():
                             model_id, 
                             [prompt], 
                             api_key, 
-                            custom_instructions if custom_instructions.strip() else "You are a helpful AI assistant specialized in technical subjects. Provide clear, detailed explanations suitable for learning purposes."
+                            custom_instructions if custom_instructions.strip() else "You are a helpful AI assistant."
                         )
                         responses[model_name] = response
             
