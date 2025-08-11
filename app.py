@@ -210,23 +210,19 @@ def main():
             
             responses = {}
             
-            # Create columns for better layout
-            cols = st.columns(len(selected_models))
-            
             # Generate responses with spinners
             for i, model_name in enumerate(selected_models):
                 model_id = AVAILABLE_MODELS[model_name]
                 
-                with cols[i % len(cols)]:
-                    with st.spinner(f"🔄 {model_name}..."):
-                        # Get response from model
-                        response = get_model_response(
-                            model_id, 
-                            [prompt], 
-                            api_key, 
-                            custom_instructions if custom_instructions.strip() else "You are a helpful AI assistant."
-                        )
-                        responses[model_name] = response
+                with st.spinner(f"🔄 {model_name}..."):
+                    # Get response from model
+                    response = get_model_response(
+                        model_id, 
+                        [prompt], 
+                        api_key, 
+                        custom_instructions if custom_instructions.strip() else "You are a helpful AI assistant."
+                    )
+                    responses[model_name] = response
             
             # Display success message
             st.success(f"✅ Generated {len(responses)} responses!")
