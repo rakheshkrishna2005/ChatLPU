@@ -1,0 +1,10 @@
+{
+  "selected_models": [
+    "OpenAI GPT-OSS 120B",
+    "Llama 3.3 70B Versatile",
+    "DeepSeek R1 Distill 70B",
+    "Kimi K2 Instruct",
+    "Qwen3 32B"
+  ],
+  "custom_instructions": ""
+}
